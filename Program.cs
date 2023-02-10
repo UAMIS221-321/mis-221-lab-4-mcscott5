@@ -16,6 +16,24 @@ while (menuChoice != 3) {
         }
     } else if (menuChoice == 2) {
         System.Console.WriteLine("Partial Triangle");
+        System.Random rnd = new System.Random();
+        int level; 
+        level = rnd.Next(3, 10); 
+
+        
+        for (int i = 0; i < level; i++) {
+            for (int j = 0; j <= i; j++){
+                Random rnd2 = new Random();
+                int number = rnd2.Next(2);
+                if (number == 0) {
+                    System.Console.Write("o ");
+                }
+                else {
+                    System.Console.Write("  ");
+                }
+            }
+            System.Console.WriteLine("\n");
+        }
     } else {
         System.Console.WriteLine("Invalid choice");
     }
