@@ -1,12 +1,27 @@
-﻿int menuChoice = 0;
+﻿string menuChoice;
 System.Console.WriteLine("Please enter triangle you wish to display: ");
-menuChoice = int.Parse(System.Console.ReadLine());
+menuChoice = System.Console.ReadLine();
 
-while (menuChoice != 3)
+while (menuChoice != "3")
 {
-    if (menuChoice == 1)
+    if (menuChoice == "1")
     {
-        System.Console.WriteLine("Full triangle");
+        GetFull();
+    }
+    else if (menuChoice == "2")
+    {
+        GetPartial();
+    }
+    else
+    {
+        System.Console.WriteLine("Invalid choice");
+    }
+    System.Console.WriteLine("Please enter triangle you wish to display: ");
+    menuChoice = System.Console.ReadLine();
+}
+
+static void GetFull() {
+    System.Console.WriteLine("Full triangle");
         System.Random rnd = new System.Random();
         int level;
         level = rnd.Next(3, 10);
@@ -18,10 +33,10 @@ while (menuChoice != 3)
             }
             System.Console.WriteLine("\n");
         }
-    }
-    else if (menuChoice == 2)
-    {
-        System.Console.WriteLine("Partial Triangle");
+}
+
+static void GetPartial() {
+    System.Console.WriteLine("Partial Triangle");
         System.Random rnd = new System.Random();
         int level;
         level = rnd.Next(3, 10);
@@ -44,11 +59,4 @@ while (menuChoice != 3)
             }
             System.Console.WriteLine("\n");
         }
-    }
-    else
-    {
-        System.Console.WriteLine("Invalid choice");
-    }
-    System.Console.WriteLine("Please enter triangle you wish to display: ");
-    menuChoice = int.Parse(System.Console.ReadLine());
 }
