@@ -21,7 +21,7 @@ while (menuChoice != "3")
 }
 
 static void GetFull() {
-    System.Console.WriteLine("Full triangle");
+    //System.Console.WriteLine("Full triangle");
         System.Random rnd = new System.Random();
         int level;
         level = rnd.Next(3, 10);
@@ -36,7 +36,7 @@ static void GetFull() {
 }
 
 static void GetPartial() {
-    System.Console.WriteLine("Partial Triangle");
+    //System.Console.WriteLine("Partial Triangle");
         System.Random rnd = new System.Random();
         int level;
         level = rnd.Next(3, 10);
